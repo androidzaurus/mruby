@@ -1,0 +1,41 @@
+mruby for kobo
+
+Requirement
+-----------
+Cross-compiler from CodeSourcery
+http://www.mentor.com/embedded-software/codesourcery
+
+telnet/ftp ready Kobo touch
+http://wiki.mobileread.com/wiki/Kobo_Touch_Hacking
+
+Screenshot
+----------
+$ telnet 192.168.100.2
+Trying 192.168.100.2...
+Connected to 192.168.100.2.
+Escape character is '^]'.
+
+(none) login: root
+[root@(none) /]# cd root
+[root@(none) /root]# ls -l
+total 1350
+-rwxr-xr-x    1 root     root       1380823 Sep 13 07:06 mruby
+drwxr-xr-x    2 root     root          1024 Aug  1  2011 neonode
+[root@(none) /root]# ./mruby -v -e 'puts "Hello World."'
+mruby - Embeddable Ruby  Copyright (c) 2010-2012 mruby developers
+NODE_SCOPE:
+  NODE_BEGIN:
+    NODE_CALL:
+      NODE_SELF
+      method='puts' (300)
+      args:
+        NODE_STR "Hello World." len 12
+irep 146 nregs=4 nlocals=2 pools=1 syms=1
+000 OP_LOADSELF R2
+001 OP_STRING   R3      "Hello World."
+002 OP_SEND     R2      :puts   1
+003 OP_STOP
+
+Hello World.
+[root@(none) /root]# 
+
