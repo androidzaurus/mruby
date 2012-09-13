@@ -2,9 +2,9 @@
 # basic build file for mruby
 
 # compiler, linker (gcc), archiver, parser generator
-export CC = gcc
-export LL = gcc
-export AR = ar
+export CC = /opt/arm-cc/bin/arm-none-linux-gnueabi-gcc
+export LL = /opt/arm-cc/bin/arm-none-linux-gnueabi-gcc
+export AR = /opt/arm-cc/bin/arm-none-linux-gnueabi-ar
 export YACC = bison
 
 ifeq ($(strip $(COMPILE_MODE)),)

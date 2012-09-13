@@ -66,7 +66,7 @@ $(CLIB) : $(RLIB) $(MRBC)
 	$(MRBC) -Bmrblib_irep -o$(DLIB) $(RLIB); $(CAT) init_$(TARGET).c $(DLIB) > $@
 
 $(MRBC) : $(LIBR0)
-	$(MAKE) -C ../tools/mrbc $(MAKE_FLAGS)
+#	$(MAKE) -C ../tools/mrbc $(MAKE_FLAGS)
 
 # merge mruby sources
 $(RLIB) : $(MRBS)

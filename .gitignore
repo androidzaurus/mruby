@@ -16,7 +16,8 @@
 /.git
 cscope.out
 /src/y.tab.c
-/bin
+/bin/*
+!/bin/mrbc
 /mrblib/mrblib.c
 /mrblib/*.*tmp
 /test/mrbtest
